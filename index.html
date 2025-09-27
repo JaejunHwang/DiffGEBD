@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>DiffGEBD</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Generic Event Boundary Detection via Denoising Diffusion</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://jaejunhwang.github.io/" target="_blank">Jaejun Hwang</a><sup>1,2*</sup>,</span>
+                <span class="author-block">
+                  <a href="https://gongda0e.github.io/" target="_blank">Dayoung Gong</a><sup>1*</sup>,</span>
+                  <span class="author-block">
+                    <a href="https://cvlab.postech.ac.kr/~mcho/" target="_blank">Minsu Cho</a><sup>1</sup>
+                  </span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block"><sup>1</sup>POSTECH, <sup>2</sup>GenGenAI<br>ICCV 2025</span>
+                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+
+                    <!-- ArXiv abstract Link -->
+                  <span class="link-block">
+                    <a href="https://arxiv.org/abs/2508.12084" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/JaejunHwang/DiffGEBD" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser image -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="static/images/teaser.png" alt="Teaser Image" style="width: 100%; height: auto;">
+      <h2 class="subtitle has-text-centered">
+        Our method generates diverse and plausible boundary predictions for generic events via denoising diffusion.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser image -->
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Generic event boundary detection (GEBD) aims to identify natural boundaries in a video, segmenting it into distinct and meaningful chunks. Despite the inherent subjectivity of event boundaries, previous methods have focused on deterministic predictions, overlooking the diversity of plausible solutions. In this paper, we introduce a novel diffusion-based boundary detection model, dubbed DiffGEBD, that tackles the problem of GEBD from a generative perspective. The proposed model encodes relevant changes across adjacent frames via temporal self-similarity and then iteratively decodes random noise into plausible event boundaries being conditioned on the encoded features. Classifier-free guidance allows the degree of diversity to be controlled in denoising diffusion. In addition, we introduce a new evaluation metric to assess the quality of predictions considering both diversity and fidelity. Experiments show that our method achieves strong performance on two standard benchmarks, Kinetics-GEBD and TAPOS, generating diverse and plausible event boundaries.          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<!-- Overview of Proposed Method -->
+<section class="hero is-small">
+  <div class="container is-max-desktop">
+    <div class="column is-centered has-text-centered">
+      <h2 class="title is-3">DiffGEBD: Generic Event Boundary Detection via Denoising Diffusion</h2>
+          <figure class="image">
+            <img src="static/images/overview.png" alt="Overview of Proposed Method">
+          </figure>
+          <figcaption class="has-text-justified">
+            Input video <em>V</em> is given to the backbone network <em>g</em>, producing visual features <em>F</em> as output. Then, the extracted visual features <em>F</em> are produced to the encoder <em>f</em>, generating <em>E</em>. During training, Gaussian noise <em>ε</em> is added to the ground-truth label <em>y</em><sub>0</sub> following the diffusion forward step. The decoder <em>h</em> then predicts boundaries from a noisy label <em>y</em><sub><em>t</em></sub> at time step <em>t</em> conditioned on <em>E</em>. During inference, the decoder iteratively denoises starting from the random Gaussian noise <em>y</em><sub><em>T</em></sub>, generates the predictions, <em>i.e.</em>, <em>y</em><sub><em>T</em></sub> → <em>y</em><sub><em>T</em>−Δ</sub> → ⋯ → <em>y</em><sub>0</sub>, following DDIM inference step [40]. By differently initializing the <em>N</em><sub><em>P</em></sub> random Gaussian noises, we can generate <em>N</em><sub><em>P</em></sub> diverse predictions using a single model.
+          </figcaption>
+    </div>
+  </div>
+</section>
+<!-- End overview of proposed method -->
+
+
+<!-- Part Label Transfer -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop has-text-centered">
+      <!-- Title -->
+      <h2 class="title is-3">Diversity-aware Evaluation of GEBD</h2>
+          <figure class="video">
+            <video controls style="width: 100%; height: auto;">
+              <source src="static/videos/eval_protocol.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </figure>
+          <figcaption class="has-text-centered">Diversity-aware evaluation protocol for GEBD</figcaption>
+      <!-- <h2 class="title is-3">Part Label Transfer</h2> -->
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+
+
+<!-- Keypoint Transfer -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop has-text-centered">
+      <!-- Title -->
+      <h2 class="title is-3">Quantitative Results</h2>
+      
+      <!-- Diversity-aware Evaluation -->
+      <div class="content">
+        <h3 class="title is-4">Diversity-aware Evaluation</h3>
+        <div class="table-container">
+          <table class="table is-striped is-hoverable is-fullwidth">
+            <thead>
+              <tr>
+                <th>Method</th>
+                <th>F1<sub>sym</sub></th>
+                <th>F1<sub>p2g</sub></th>
+                <th>F1<sub>g2p</sub></th>
+                <th>Diversity</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Temporal Perceiver</td>
+                <td>69.4</td>
+                <td>72.2</td>
+                <td>67.4</td>
+                <td>14.6</td>
+              </tr>
+              <tr>
+                <td>SC-Transformer</td>
+                <td>72.9</td>
+                <td>74.9</td>
+                <td>71.6</td>
+                <td>18.9</td>
+              </tr>
+              <tr>
+                <td>BasicGEBD</td>
+                <td>72.2</td>
+                <td>74.5</td>
+                <td>70.6</td>
+                <td>18.6</td>
+              </tr>
+              <tr>
+                <td>EfficientGEBD</td>
+                <td>72.6</td>
+                <td><strong>76.0</strong></td>
+                <td>70.2</td>
+                <td>14.9</td>
+              </tr>
+              <tr class="has-background-light">
+                <td><strong>DiffGEBD (ours)</strong></td>
+                <td><strong>74.0</strong></td>
+                <td>75.6</td>
+                <td><strong>72.9</strong></td>
+                <td><strong>20.4</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+      <!-- Conventional Evaluation -->
+      <div class="content">
+        <h3 class="title is-4">Conventional Evaluation</h3>
+        <div class="table-container">
+          <table class="table is-striped is-hoverable is-fullwidth">
+            <thead>
+              <tr>
+                <th rowspan="2">Method</th>
+                <th colspan="2">F1@0.05</th>
+              </tr>
+              <tr>
+                <th>Kinetics-GEBD</th>
+                <th>TAPOS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>BMN</td>
+                <td>18.6</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>BMN-StartEnd</td>
+                <td>49.1</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>ISBA</td>
+                <td>-</td>
+                <td>10.6</td>
+              </tr>
+              <tr>
+                <td>TCN</td>
+                <td>58.8</td>
+                <td>23.7</td>
+              </tr>
+              <tr>
+                <td>CTM</td>
+                <td>-</td>
+                <td>24.4</td>
+              </tr>
+              <tr>
+                <td>TransParser</td>
+                <td>-</td>
+                <td>23.9</td>
+              </tr>
+              <tr>
+                <td>PC</td>
+                <td>62.5</td>
+                <td>52.2</td>
+              </tr>
+              <tr>
+                <td>SBaCl</td>
+                <td>73.2</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>Temporal Perceiver</td>
+                <td>74.8</td>
+                <td>55.2</td>
+              </tr>
+              <tr>
+                <td>DDM-Net</td>
+                <td>76.4</td>
+                <td>60.4</td>
+              </tr>
+              <tr>
+                <td>CVRL</td>
+                <td>74.3</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>LCVS</td>
+                <td>76.8</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>SC-Transformer</td>
+                <td>77.7</td>
+                <td>61.8</td>
+              </tr>
+              <tr>
+                <td>BasicGEBD</td>
+                <td>76.8</td>
+                <td>60.0</td>
+              </tr>
+              <tr>
+                <td>EfficientGEBD</td>
+                <td>78.3</td>
+                <td>63.1</td>
+              </tr>
+              <tr>
+                <td>DyBDet</td>
+                <td><strong>79.6</strong></td>
+                <td>62.5</td>
+              </tr>
+              <tr class="has-background-light">
+                <td><strong>DiffGEBD (ours)</strong></td>
+                <td>78.4</td>
+                <td><strong>65.8</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+      <!-- Effect of CFG weight -->
+      <div class="content">
+        <h3 class="title is-4">Effect of CFG weight <em>w</em></h3>
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <figure class="image">
+              <img src="static/images/cfg_graph-1.png" alt="Effect of CFG weight">
+            </figure>
+            <figcaption class="has-text-centered">Performance variation with different CFG weight values</figcaption>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  </section>
+  <!-- End quantitative results -->
+
+
+<!-- Qualitative Results -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop has-text-centered">
+      <h2 class="title is-3">Qualitative Results</h2>
+      <figure class="image">
+        <img src="static/images/qual1.png" alt="Qualitative Results">
+      </figure>
+      <figcaption class="has-text-centered">Example results on Kinetics-GEBD</figcaption>
+    </div>
+  </div>
+</section>
+<!-- End qualitative results -->
+
+
+<!-- Paper poster -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h2 class="title">Poster</h2>
+
+      <iframe  src="static/pdfs/poster_compressed.pdf" width="100%" height="550">
+          </iframe>
+        
+      </div>
+    </div>
+  </section>
+<!--End paper poster -->
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>
+        @article{hwang2025generic,
+          title={Generic Event Boundary Detection via Denoising Diffusion},
+          author={Hwang, Jaejun and Gong, Dayoung and Kim, Manjin and Cho, Minsu},
+          journal={arXiv preprint arXiv:2508.12084},
+          year={2025}
+        }
+      </code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>

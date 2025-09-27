@@ -1,0 +1,2 @@
+## Generic Event Boundary Detection via Denoising Diffusion (`DiffGEBD`)
+This branch contains the source code for the DiffGEBD project page, based on [eliahuhorwitz/Academic-project-page-template](https://github.com/eliahuhorwitz/Academic-project-page-template).
