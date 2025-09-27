@@ -108,7 +108,11 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="static/images/teaser.png" alt="Teaser Image" style="width: 100%; height: auto;">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <img src="static/images/teaser.png" alt="Teaser Image" style="width: 100%; height: auto;">
+        </div>
+      </div>
       <h2 class="subtitle has-text-centered">
         Our method generates diverse and plausible boundary predictions for generic events via denoising diffusion.
       </h2>
@@ -158,6 +162,8 @@
     <div class="container is-max-desktop has-text-centered">
       <!-- Title -->
       <h2 class="title is-3">Diversity-aware Evaluation of GEBD</h2>
+      <div class="columns is-centered">
+        <div class="column is-6">
           <figure class="video">
             <video controls style="width: 100%; height: auto;">
               <source src="static/videos/eval_protocol.mp4" type="video/mp4">
@@ -165,6 +171,8 @@
             </video>
           </figure>
           <figcaption class="has-text-centered">Diversity-aware evaluation protocol for GEBD</figcaption>
+        </div>
+      </div>
       <!-- <h2 class="title is-3">Part Label Transfer</h2> -->
 </div>
 </div>
@@ -181,9 +189,11 @@
       
       <!-- Diversity-aware Evaluation -->
       <div class="content">
-        <h3 class="title is-4">Diversity-aware Evaluation</h3>
-        <div class="table-container">
-          <table class="table is-striped is-hoverable is-fullwidth">
+        <h3 class="title is-5">Diversity-aware Evaluation</h3>
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="table-container">
+              <table class="table is-striped is-hoverable is-fullwidth" style="border-top: 1px solid #dbdbdb; border-bottom: 1px solid #dbdbdb;">
             <thead>
               <tr>
                 <th>Method</th>
@@ -230,15 +240,20 @@
                 <td><strong>20.4</strong></td>
               </tr>
             </tbody>
-          </table>
+              </table>
+            </div>
+            <figcaption class="has-text-centered">Diversity-aware evaluation results on Kinetics-GEBD dataset</figcaption>
+          </div>
         </div>
       </div>
       
       <!-- Conventional Evaluation -->
       <div class="content">
-        <h3 class="title is-4">Conventional Evaluation</h3>
-        <div class="table-container">
-          <table class="table is-striped is-hoverable is-fullwidth">
+        <h3 class="title is-5">Conventional Evaluation</h3>
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="table-container">
+              <table class="table is-striped is-hoverable is-fullwidth" style="border-top: 1px solid #dbdbdb; border-bottom: 1px solid #dbdbdb;">
             <thead>
               <tr>
                 <th rowspan="2">Method</th>
@@ -286,7 +301,7 @@
                 <td>52.2</td>
               </tr>
               <tr>
-                <td>SBaCl</td>
+                <td>SBoCo</td>
                 <td>73.2</td>
                 <td>-</td>
               </tr>
@@ -336,15 +351,18 @@
                 <td><strong>65.8</strong></td>
               </tr>
             </tbody>
-          </table>
+              </table>
+            </div>
+            <figcaption class="has-text-centered">Conventional evaluation results on Kinetics-GEBD and TAPOS datasets</figcaption>
+          </div>
         </div>
       </div>
       
       <!-- Effect of CFG weight -->
       <div class="content">
-        <h3 class="title is-4">Effect of CFG weight <em>w</em></h3>
+        <h3 class="title is-5">Effect of CFG weight <em>w</em></h3>
         <div class="columns is-centered">
-          <div class="column is-6">
+          <div class="column is-8">
             <figure class="image">
               <img src="static/images/cfg_graph-1.png" alt="Effect of CFG weight">
             </figure>
